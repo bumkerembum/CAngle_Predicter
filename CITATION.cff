@@ -1,0 +1,10 @@
+cff-version: 1.1.0
+message: "If you use this work, please cite it as below."
+authors:
+  - family-names: Dülger
+    given-names: Kerem
+title: "CAngle_Predicter"
+version: "0.1"
+url: "https://github.com/bumkerembum/CAngle_Predicter"
+date-released: 2024-12-18
+license: "MIT"
