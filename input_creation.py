@@ -4,14 +4,14 @@ from PIL import Image
 from sklearn.model_selection import train_test_split
 
 
-def load_organized_images(base_dir, target_size=(224, 224)):
+def load_organized_images(base_dir, target_size):
     """
     Loads images and labels from a structured directory where folder names are labels.
     Args:
         base_dir (str): Path to the root directory containing subdirectories with images.
-        target_size (tuple): Dimensions to resize images (default: 224x224).
+        target_size (tuple): Dimensions to resize images.
     Returns:
-        tuple: Arrays of images and labels.
+        tuple: Arrays of images, x, and labels, y.
     """
     images = []
     labels = []
@@ -50,15 +50,16 @@ def load_organized_images(base_dir, target_size=(224, 224)):
     return images, labels
 
 # Path to the organized dataset directory
-dataset_directory = "/home/kerem/Desktop/contakbizim/data/organized_images"
+dataset_directory = "file location where organized images are found"
+target_size = (224, 224) # 224x224 is most common size for popular architectures such as ResNet)
 
 # Load and preprocess the dataset
 X, y = load_organized_images(dataset_directory)
 
 # Output the dataset shapes
 print(f"Loaded {len(X)} images with shape: {X[0].shape}")
-print(f"Labels shape: {y.shape}")
+print(f"Labels shape: {y.shape}") 
 
-np.save('X.npy', X)
-np.save('y.npy', y)
+np.save("save location/X.npy", X)
+np.save("save location/y.npy", y)
 
