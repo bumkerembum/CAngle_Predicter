@@ -7,5 +7,6 @@ Neural network model for predicting contact angle of droplet from droplet image
 - Add second training code.
 - Add data augmentation code.
 - Add the fully trained model for using in application
+- Modularize codes 
 - Finish application version, add UI
 - Add user guide
